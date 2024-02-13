@@ -1,0 +1,90 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+*{
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    background-image: url(images/about.jpg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 40vw 20vh;
+}
+h1{
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgb(0,165,0);
+}
+.about{
+    margin: 20px 70px 0 70px;
+}
+p,ul{
+    font-size: 18px;
+    width: 38vw;
+}
+ul{
+    padding-left: 0;
+    margin-left: 0;
+}
+.text-box h2{
+    font-size: 42px;
+}
+.footer{
+    margin-top: 50px;
+    padding: 20px 0 20px 0;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(0,165,0);
+    text-align: center;
+}
+.footer p{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    color: white
+}
+.link{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <h1>О Сайте</h1>
+    <div class="about">
+        <p id="text">Добро пожаловать на EcoShop - ваш источник экологически чистых товаров для здорового и счастливого образа жизни!<br>
+            EcoShop - это онлайн-платформа, которая соединяет продавцов и покупателей экологически чистых товаров, таких как органическая еда, натуральная косметика, биоразлагаемая упаковка, энергоэффективные устройства и т.д.</p>
+        <h2>Наша миссия</h2>
+        <p>Наша миссия - сделать мир лучше, поддерживая устойчивое потребление и производство. Мы верим, что каждый может внести свой вклад в защиту окружающей среды и улучшение качества жизни, выбирая экологически чистые товары.
+        </p>
+        <h2>На нашем сайте вы можете:</h2>
+        <ul>
+            <li>Найти широкий ассортимент экологически чистых товаров от проверенных продавцов по доступным ценам</li>
+            <li>Продать свои экологически чистые товары, используя удобную и безопасную систему оплаты и доставки</li>
+            <li>Получать информацию и советы о том, как жить экологично и экономично</li>
+            <li>Общаться с другими пользователями, делясь своим опытом и отзывами о товарах</li>
+            <li>Участвовать в акциях и розыгрышах, получая скидки и подарки</li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>Присоединяйтесь к нашему сообществу и откройте для себя преимущества экологически чистых товаров с EcoShop!</p><br>
+        <a class="link" href="contact.html">Связаться с нами</a><br>
+        <a class="link" href="brochure.pdf" download>Скачать брошюру о EcoShop</a><br>
+        <a class="link" href="" onclick="mailTo('info@ecoshop.com')">Написать письмо в EcoShop</a>
+    </div>
+</body>
+</html>

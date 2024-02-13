@@ -1,0 +1,18 @@
+<!-- Это код для главной страницы сайта EcoShop -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoShop - онлайн-платформа для покупки и продажи экологически чистых товаров</title>
+</head>
+  <!-- Используем фреймсет для разделения страницы на три части: верхнюю, левую и правую -->
+  <frameset cols="200,*">
+    <frame src="menu.html" name="menu" scrolling="no" noresize></frame>
+    <frameset rows="140,*">
+      <!-- Верхняя часть содержит логотип, название и слоган сайта -->
+      <frame src="header.html" name="header" scrolling="no" noresize>
+      <!-- Правая часть содержит основное содержимое сайта, которое меняется в зависимости от выбранной страницы -->
+      <frame src="home.html" name="content" scrolling="auto" noresize>
+    </frameset>
+  </frameset>
+</html>

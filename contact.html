@@ -1,0 +1,172 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <script src="https://kit.fontawesome.com/31e9720ace.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <style>
+*{
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    background-color: rgb(0,165,0);
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 75px;
+    margin: 0;
+}
+img{
+    width: 100px;
+    float: left;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+figure{
+    align-items: center;
+    display: flex;
+}
+figcaption{
+    font-size: 18px;
+}
+form{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-box{
+    padding: 30px;
+    position: absolute;
+    background-color: white;
+    top: 140px;
+    left: 17.5vw;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 65vw;
+    box-shadow: black;
+}
+.inputs{
+    width: 33%;
+    flex: left;
+    padding: 10px;
+}
+i{
+    position: absolute;
+}
+.icon {
+    float: right;
+    margin-right: 16px;
+    margin-top: -36px;
+    position: relative;
+    z-index: 2;
+    color: rgb(0,165,0);
+}
+.fa-pen{
+    margin-top: -140px;
+}
+input{
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+}
+label,input{
+    font-size: 18px;
+}
+.message{
+    margin-top: 5px;
+    width: 100%;
+}
+textarea{
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 100%;
+}
+button{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0,165,0);
+    border-radius: 5px;
+    padding: 15px;
+}
+button:hover{
+    background-color: rgb(0, 140, 0);
+    cursor: pointer;
+}
+
+.footer{
+  margin-top: 100vh;
+  padding: 20px 0 20px 0;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(0,165,0);
+  text-align: center;
+}
+.footer p{
+  margin: 0;
+  padding: 0;
+  width: auto;
+  color: white
+}
+.link{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+  <h1>Контакты</h1>
+  <div class="form-box">
+    <figure>
+        <img src="images/logo.png" alt="logo">
+        <figcaption>Используйте форму, чтобы связаться с нами. Вы можете использовать форму, чтобы задать вопросы или отметить любые проблемы, которые у вас могут возникнуть.</figcaption>
+    </figure>
+    <form action="https://formsubmit.co/2d82aca280933cfc81e129e7903e6096" method="POST">
+        <div class="inputs">
+            <label for="name">ФИО*</label><br>
+            <input type="text" name="Name" placeholder="ФИО">
+            <span class="fa fa-user icon"></span>
+        </div>
+        <div class="inputs">
+            <label for="email">Электронная почта*</label><br>
+            <input type="text" name="Email" placeholder="Почта">
+            <span class="fa fa-envelope icon"></span>
+        </div>
+        <div class="inputs">
+            <label for="phone">Номер телефона</label><br>
+            <input type="text" name="Phone" placeholder="Номер">
+            <span class="fa fa-phone icon"></span>
+        </div>
+        <div class="message">
+            <label for="message">Сообщение*</label><br>
+            <textarea name="message" name="Message" id="message" rows="6" placeholder="Сообщение"></textarea>
+            <span class="fa fa-pen icon"></span>
+        </div>
+        <button type="submit">Отправить сообщение администраторам</button>
+    </form>
+  </div>
+  <div class="footer">
+    <p>Присоединяйтесь к нашему сообществу и откройте для себя преимущества экологически чистых товаров с EcoShop!</p><br>
+    <a class="link" href="contact.html">Связаться с нами</a><br>
+    <a class="link" href="others/brochure.pdf" download>Скачать брошюру о EcoShop</a><br>
+    <a class="link" href="" onclick="mailTo('info@ecoshop.com')">Написать письмо в EcoShop</a>
+  </div>
+</body>
+</html>

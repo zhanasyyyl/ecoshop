@@ -1,0 +1,148 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoShop-Catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+* {
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    background-color: rgb(0,165,0);
+    color: white;
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+}
+.properties {
+    display: flex;
+    padding: 20px;
+    height: 30px;
+    justify-content: left;
+    align-items: center;
+}
+.properties span {
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+select {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+select:hover{
+    cursor: pointer;
+}
+
+.catalog {
+    margin: 0 20px 0 20px;
+}
+.catalog figure {
+    margin: 5px auto;
+    display: inline-block;
+    width: min-content;
+    border: 3px solid green;
+}
+.catalog figure:hover {
+    cursor: pointer;
+}
+.image {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    border-bottom: 3px solid green;
+}
+.catalog img:hover {
+    opacity: 0.5;
+}
+.catalog figcaption {
+    min-height: 26px;
+    font-size: 16px;
+}
+.catalog figcaption:hover {
+    color: green;
+}
+#price {
+    font-weight: 800;
+}
+.footer{
+    margin-top: 50px;
+    padding: 20px 0 20px 0;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(0,165,0);
+    text-align: center;
+}
+.footer p{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    color: white
+}
+.link{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <h1>Каталог Товаров</h1>
+    <div class="main">
+        <div class="properties">
+            <span>Сортировать по:</span>
+            <select name="sort" id="sort-select">
+                <option value="0">По возрастанию цены</option>
+                <option value="0">По убыванию цены</option>
+                <option value="0">По возрастанию отзывов</option>
+                <option value="0">По убыванию отзывов</option>
+            </select>
+        </div> <br>
+        <div class="catalog">
+            <figure>
+                <div class="image">
+                    <a href="product.html"><img width="300px" src="images/apple.jpg" alt="apple"></a>
+                </div>
+                <figcaption>Органическое Яблоко</figcaption>
+                <figcaption id="price">100₸</figcaption>
+            </figure>
+            <figure>
+                <div class="image">
+                    <a href="product.html"><img width="300px" src="images/soap.jpg" alt="soap"></a>
+                </div>
+                <figcaption>Натуральное Мыло</figcaption>
+                <figcaption id="price">500₸</figcaption>
+            </figure>
+            <figure>
+                <div class="image">
+                    <a href="product.html"><img width="300px" src="images/lamp.jpg" alt="lamp"></a>
+                </div>
+                <figcaption>Энергоэффективная Лампа</figcaption>
+                <figcaption id="price">3000₸</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Присоединяйтесь к нашему сообществу и откройте для себя преимущества экологически чистых товаров с EcoShop!</p><br>
+        <a class="link" href="contact.html">Связаться с нами</a><br>
+        <a class="link" href="others/brochure.pdf" download>Скачать брошюру о EcoShop</a><br>
+        <a class="link" href="" onclick="mailTo('info@ecoshop.com')">Написать письмо в EcoShop</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+*{
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    background-color: rgb(0, 165, 0);
+    font-size: 50px;
+    color: white;
+    padding: 20px;
+}
+.line{
+    height: 3px;
+    background-color: rgb(0, 165, 0);
+    display: inline-block;
+    margin: 3px;
+}
+.one{
+    margin-left: 60px;
+    width: 15px;
+}
+.two{
+    width: 40px;
+    margin-right: 15px;
+}
+h4{
+    display: inline-block;
+    color: rgb(0, 165, 0);
+    letter-spacing: -1px;
+}
+h2{
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+.collapsible{
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.collapsible:hover{
+    cursor: pointer;
+}
+.collapsible::before {
+  content: '+';
+  font-size: 18px;
+  float: left;
+  color: rgb(0, 165, 0);
+  margin-left: 50px;
+  margin-right: 15px;
+}
+.active::before {
+  content: "-";
+}
+.content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.link{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: underline;
+}
+
+.footer{
+    margin-top: 40px;
+  padding: 20px 0 20px 0;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(0,165,0);
+  text-align: center;
+}
+.footer p{
+  margin: 0;
+  padding: 0;
+  width: auto;
+  color: white
+}
+    </style>
+</head>
+<body>
+    <h1>Частые Вопросы</h1>
+    <div class="line one"></div>
+    <div class="line two"></div>
+    <h4>FAQS</h4><br>
+    <h2>Здесь вы найдете ответы на свои вопросы</h2>
+    <button type="button" class="collapsible">Что такое EcoShop?</button>
+    <div class="content">
+        <p>EcoShop - это онлайн-платформа, которая соединяет продавцов и покупателей экологически чистых товаров,
+            таких как органическая еда, натуральная косметика, биоразлагаемая упаковка, энергоэффективные устройства и т.д.
+            Наша миссия - сделать зеленый образ жизни доступным и удобным для всех.
+        </p>
+    </div>
+    <button type="button" class="collapsible">Как зарегистрироваться на EcoShop?</button>
+    <div class="content">
+        <p>Для регистрации на EcoShop вам нужно заполнить форму на нашем сайте,
+            указав свой электронный адрес, имя, пароль и роль (продавец или покупатель).
+            После этого вы сможете просматривать, покупать и продавать товары на нашей платформе.
+        </p>
+    </div>
+    <button type="button" class="collapsible">Какие товары можно найти на EcoShop?</button>
+    <div class="content">
+        <p>На EcoShop вы можете найти разнообразные товары, которые отвечают нашим критериям экологичности,
+            качества и безопасности.
+            Например, вы можете найти органические фрукты и овощи, натуральную косметику без парабенов и силиконов,
+            биоразлагаемую упаковку из кукурузного крахмала, энергоэффективные устройства,
+            которые снижают потребление электричества, и многое другое.
+        </p>
+    </div>
+    <button type="button" class="collapsible">Как оплатить товары на EcoShop?</button>
+    <div class="content">
+        <p>Для оплаты товаров на EcoShop вы можете использовать различные способы,
+            такие как банковская карта, электронный кошелек, наличные при получении или криптовалюта.
+            Мы гарантируем безопасность и конфиденциальность ваших платежных данных.
+        </p>
+    </div>
+    <button type="button" class="collapsible">Как доставить товары с EcoShop?</button>
+    <div class="content">
+        <p>Для доставки товаров с EcoShop вы можете выбрать один из наших партнеров-курьеров,
+            которые предлагают быструю, надежную и экологически дружелюбную доставку.
+            Вы также можете самостоятельно забрать товары с нашего склада или у продавца,
+            если он находится в вашем городе.
+        </p>
+    </div>
+    <button type="button" class="collapsible">Как вернуть или обменять товары с EcoShop?</button>
+    <div class="content">
+        <p>Если вы не удовлетворены качеством или соответствием товаров, которые вы купили на EcoShop,
+            вы можете вернуть или обменять их в течение 14 дней с момента получения.
+            Для этого вам нужно связаться с нашей службой поддержки, указать номер заказа и причину возврата или обмена.
+            Мы обработаем ваш запрос и вернем вам деньги или отправим новый товар. Обратите внимание,
+            что возврат или обмен возможен только для товаров, которые не были использованы, повреждены или истекли.
+        </p>
+    </div>
+    <div class="footer">
+        <p>Присоединяйтесь к нашему сообществу и откройте для себя преимущества экологически чистых товаров с EcoShop!</p><br>
+        <a class="link" href="contact.html">Связаться с нами</a><br>
+        <a class="link" href="others/brochure.pdf" download>Скачать брошюру о EcoShop</a><br>
+        <a class="link" href="" onclick="mailTo('info@ecoshop.com')">Написать письмо в EcoShop</a>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
+</body>
+</html>
