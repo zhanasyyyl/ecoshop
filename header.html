@@ -1,45 +1,116 @@
 <!-- Это код для файла header.html, который содержит логотип, название и слоган сайта -->
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      font-family: "Nunito", sans-serif;
-    }
-    .title{
-      font-size: 48px;
-    }
-    .slogan{
-      font-size: 18px;
-    }
-    .logo{
-      height: 100px;
-    }
-    div, .slogan{
-      padding-left: 20px;
-    }
-    div{
-      display: flex;
-      justify-content: left;
-      align-items: center;
-    }
-  </style>
-</head>
-<body>
-  <div>
-    <!-- Используем тег img для вставки логотипа сайта, который находится в файле logo.png -->
-    <img src="images/logo.png" alt="Логотип EcoShop" class="logo">
-    <!-- Используем тег h1 для вставки названия сайта -->
-    <h1 class="title">EcoShop</h1>
-    <!-- Используем тег p для вставки слогана сайта -->
-  </div>
-  <p class="slogan">Покупайте и продавайте экологически чистые товары</p>
-</body>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/31e9720ace.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Nunito", sans-serif;
+      }
+      body {
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .tab {
+        float: right;
+        margin-left: 50px;
+        margin-right: 50px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+
+      #logo {
+        width: 203px;
+      }
+
+      .tab button {
+        background-color: inherit;
+        color: rgb(150, 150, 150);
+        font-size: 18px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 5px 10px;
+      }
+      .tab button.active {
+        color: black;
+        font-weight: bold;
+        border-bottom: 3px solid rgb(52, 168, 83);
+      }
+      #signup {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(247, 185, 72);
+        float: right;
+      }
+      #signup:hover {
+        background-color: rgb(222, 164, 57);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="home.html"
+      ><img src="images/logo.png" alt="Логотип EcoShop" id="logo"
+    /></a>
+    <div class="tab">
+      <a href="home.html" target="content"
+        ><button
+          class="tablinks active"
+          id="first-tab"
+          onclick="openPage(event)"
+        >
+          Главная
+        </button></a
+      >
+      <a href="catalog.html" target="content"
+        ><button class="tablinks" onclick="openPage(event)">Каталог</button></a
+      >
+      <a href="about.html" target="content"
+        ><button class="tablinks" onclick="openPage(event)">О нас</button></a
+      >
+      <a href="faq.html" target="content"
+        ><button class="tablinks" onclick="openPage(event)">Вопросы</button></a
+      >
+      <a href="contact.html" target="content"
+        ><button class="tablinks" onclick="openPage(event)">Контакты</button></a
+      >
+    </div>
+    <a href="signup.html" target="content"
+      ><button id="signup">
+        Создать аккаунт <i class="fa fa-arrow-right-long"></i></button
+    ></a>
+
+    <script>
+      function openPage(evt) {
+        var i, tablinks;
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
 </html>

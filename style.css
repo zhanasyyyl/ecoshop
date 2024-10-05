@@ -1,123 +1,295 @@
 /* Это файл со стилями CSS для сайта EcoShop */
 /* Задаем общие стили для всего документа */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 
-body{
+body {
   background-image: url("images/hero.jpg");
-  background-size: 63%;
-  background-position: 37vw 10vh;
+  background-size: 68%;
+  background-position: 37vw 0;
   background-repeat: no-repeat;
 }
 
-/* Задаем стили для основного содержимого сайта */
-.content {
-  padding: 20px;
+.hero-section {
+  padding-left: 50px;
+  min-height: 41vw;
 }
 
-.content h1 {
+.hero-section h1 {
   letter-spacing: -1.6px;
   line-height: 77px;
   font-size: 72px;
-  color: green;
-  margin-bottom: 20px;
 }
 
-.content p {
+.hero-section #welcome-title {
+  margin-top: 50px;
+}
+.hero-section #ecoshop-title {
+  color: rgb(52, 168, 83);
+  font-weight: 800;
+  margin-bottom: 50px;
+  font-size: 76px;
+}
+
+.hero-section p {
   font-size: 18px;
   width: 40%;
   color: black;
   margin-bottom: 20px;
 }
 
-.content table {
-  border-collapse: collapse;
+button {
+  margin-top: 25px;
+  font-size: 22px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+button:hover {
+  cursor: pointer;
+}
+#get-started {
+  color: white;
+  background-color: rgb(52, 168, 83);
+  padding: 15px;
+  border: none;
+  box-shadow: inset 0 0 0 0 rgb(236, 240, 243);
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+#get-started:hover {
+  color: black;
+  background-color: rgb(52, 150, 83);
+  box-shadow: inset -400px 0 0 0 rgb(236, 240, 243);
+}
+
+#login {
+  background-color: white;
+  color: rgb(52, 168, 83);
+  padding: 13px;
+  border: 2px solid rgb(52, 168, 83);
+}
+#login:hover {
+  color: rgb(52, 150, 83);
+  background-color: rgb(251, 251, 251);
+}
+
+.what-we-do {
+  background-color: rgb(247, 247, 247);
+  margin-bottom: 0px;
+  padding: 70px 50px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  padding-bottom: 100px;
+}
+.what-we-do h1 {
+  font-weight: 800;
+  color: rgb(52, 168, 83);
+  font-size: 54px;
+  width: 100%;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.column {
+  background-color: white;
+  text-align: center;
+  max-width: 45%;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 10px;
+  box-shadow: 10px black;
+}
+.column img {
+  height: 100px;
+  color: rgb(0, 165, 0);
+  margin-bottom: 12px;
+}
+.column p {
+  font-size: 18px;
+}
+
+#examples-h1 {
+  font-weight: 800;
+  color: rgb(52, 168, 83);
+  font-size: 54px;
+  text-align: center;
+  padding-top: 70px;
+  margin-bottom: 25px;
+}
+
+table {
+  border: 1px solid black;
+  border-radius: 10px;
+  border-spacing: 0;
   width: 80%;
   margin: 0 auto;
 }
-
-.content table th, td {
-  border: 1px solid green;
-  padding: 10px;
-  text-align: center;
+table tr:first-child > :first-child {
+  border-top-left-radius: 10px;
+}
+table tr:first-child > :last-child {
+  border-top-right-radius: 10px;
+}
+table tr:last-child > :first-child {
+  border-bottom-left-radius: 10px;
+}
+table tr:last-child > :last-child {
+  border-bottom-right-radius: 10px;
 }
 
-#price{
+table th,
+table td {
+  padding: 20px;
+  box-shadow: -1px -1px black;
+  text-align: center;
+}
+table img {
+  height: 200px;
+}
+
+#price {
   font-weight: bold;
 }
 
-.content table th {
-  background-color: lightgreen;
-  color: black;
+table th {
+  background-color: rgb(52, 168, 83);
+  color: white;
   font-size: 18px;
 }
 
-.content table td {
-  font-size: 16px;
+table td {
+  font-size: 18px;
 }
 
-.content img {
-  height: 200px;
-  border: 3px solid green;
-  margin: 10px;
+.media-section {
+  display: flex;
+  margin-top: 50px;
+  padding: 50px;
+  gap: 25px;
+  background-color: rgb(247, 247, 247);
+  padding-bottom: 100px;
 }
-.content figure {
+.media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 35vw;
+}
+
+.video-desc {
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.video-desc h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: rgb(52, 168, 83);
+}
+
+audio {
+  width: 100%;
+  margin: 10px;
+  display: block;
+}
+video {
+  width: 100%;
+  border-radius: 15px;
+  margin: 10px;
+  display: block;
+}
+
+.services {
+  margin-top: 20px;
+  display: flex;
+  color: white;
+  background-color: rgb(52, 168, 83);
+  padding: 30px;
+  border-radius: 5px;
+  width: 100%;
+  justify-content: space-between;
+}
+.services p {
+  font-size: 17px;
+  font-weight: bold;
+}
+.services i {
+  font-size: 24px;
+}
+.col {
   display: flex;
   align-items: center;
-  justify-content: left;
+  gap: 5px;
+  justify-content: center;
+  max-width: 25%;
 }
 
-.content figcaption {
-  font-size: 14px;
-  color: green;
-  text-align: center;
-}
-
-.content audio {
-  width: 530px;
-  margin: 10px;
-  display: block;
-}
-
-.content video {
-  width: 530px;
-  height: 300px;
-  border: 3px solid green;
-  margin: 10px;
-  display: block;
-}
-
-.content marquee {
+.footer marquee {
   font-size: 18px;
-  color: green;
-  background-color: lightgreen;
+  color: white;
+  background-color: rgb(52, 168, 83);
   width: 100%;
-  margin: 0 auto;
+  margin-bottom: 30px;
   padding: 10px;
 }
 
-.link{
-    color: rgb(250, 250, 250);
-    text-decoration: none;
-}
-.link:hover{
-    text-decoration: underline;
-}
-
-.footer{
-  padding: 20px 0 20px 0;
+.footer {
+  padding: 0;
   width: 100%;
   align-items: center;
-  background-color: rgb(0,165,0);
-  text-align: center;
+  background-color: rgb(52, 168, 83);
+  display: flex;
+  flex-wrap: wrap;
 }
-.footer p{
+.footer p {
+  text-align: center;
   margin: 0;
   padding: 0;
-  width: auto;
-  color: white
+  width: 100%;
+  color: white;
+  margin-bottom: 20px;
+}
+
+#logo {
+  text-align: center;
+  text-decoration: none;
+  width: 150px;
+  margin: 0 50px 0 50px;
+}
+#logo img {
+  width: 150px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.contact,
+.about-us,
+.help {
+  width: 25%;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.mainlink:hover {
+  text-decoration: none;
+}
+.copyright {
+  background-color: rgb(40, 40, 40);
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  padding: 15px 0 0 0;
 }

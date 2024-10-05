@@ -5,6 +5,5 @@ function openExternal(url) {
 }
 
 function mailTo(email) {
-  window.open('mailto:'+email)
+  window.open("mailto:" + email);
 }
-  

@@ -1,148 +1,500 @@
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoShop-Catalog</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/31e9720ace.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="catalog.js"></script>
     <style>
-* {
-    font-family: "Nunito", sans-serif;
-    box-sizing: border-box;
-}
-body{
-    margin: 0;
-    padding: 0;
-}
-h1 {
-    background-color: rgb(0,165,0);
-    color: white;
-    font-size: 50px;
-    padding: 20px;
-    text-align: center;
-}
-.properties {
-    display: flex;
-    padding: 20px;
-    height: 30px;
-    justify-content: left;
-    align-items: center;
-}
-.properties span {
-    padding-right: 10px;
-    font-size: 18px;
-}
+      * {
+        font-family: "Nunito", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(247, 247, 247);
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      h1 {
+        background-color: rgb(52, 168, 83);
+        color: white;
+        font-size: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        background-color: rgb(52, 168, 83);
+      }
+      h1::before {
+        content: "";
+        background-image: url(images/background.jpg);
+        background-size: contain;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.09;
+      }
+      .properties {
+        display: flex;
+        padding: 20px;
+        height: 30px;
+        justify-content: left;
+        align-items: center;
+      }
+      .properties span {
+        padding-right: 10px;
+        font-size: 18px;
+      }
 
-select {
-    font-size: 18px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
-}
+      select {
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 5px;
+      }
 
-select:hover{
-    cursor: pointer;
-}
+      select:hover {
+        cursor: pointer;
+      }
 
-.catalog {
-    margin: 0 20px 0 20px;
-}
-.catalog figure {
-    margin: 5px auto;
-    display: inline-block;
-    width: min-content;
-    border: 3px solid green;
-}
-.catalog figure:hover {
-    cursor: pointer;
-}
-.image {
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 300px;
-    border-bottom: 3px solid green;
-}
-.catalog img:hover {
-    opacity: 0.5;
-}
-.catalog figcaption {
-    min-height: 26px;
-    font-size: 16px;
-}
-.catalog figcaption:hover {
-    color: green;
-}
-#price {
-    font-weight: 800;
-}
-.footer{
-    margin-top: 50px;
-    padding: 20px 0 20px 0;
-    width: 100%;
-    align-items: center;
-    background-color: rgb(0,165,0);
-    text-align: center;
-}
-.footer p{
-    margin: 0;
-    padding: 0;
-    width: auto;
-    color: white
-}
-.link{
-    color: rgb(250, 250, 250);
-    text-decoration: none;
-}
-.link:hover{
-    text-decoration: underline;
-}
+      .catalog {
+        margin: 0 100px 0 100px;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        gap: 15px;
+      }
+      .product-card {
+        background-color: white;
+        border: 1px solid rgb(230, 230, 230);
+        border-radius: 5px;
+        width: 320px;
+        overflow-x: hidden;
+        text-align: center;
+      }
+      .product-card img {
+        height: 300px;
+        transition: 0.3s;
+        scale: 0.9;
+      }
+      .product-card:hover img {
+        scale: 1;
+      }
+      .product-card:hover .add-to-cart {
+        background-color: rgb(52, 168, 83);
+        color: white;
+      }
+      .product-card i {
+        color: orange;
+        margin: 0;
+        padding: 0;
+      }
+      .product-card p {
+        margin: 0;
+        padding: 0;
+      }
+      .product-card p:hover {
+        color: rgb(42, 141, 255);
+      }
+      .price {
+        font-weight: 800;
+        font-size: 20px;
+        margin-top: 5px;
+      }
+      .product-card .add-to-cart {
+        background-color: rgb(242, 248, 242);
+        color: rgb(52, 168, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.3s;
+      }
+      .product-card .add-to-cart:hover {
+        cursor: pointer;
+      }
+      .footer {
+        margin-top: 100px;
+        padding: 20px 0 0 0;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(52, 168, 83);
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .footer p {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      #logo {
+        text-align: center;
+        text-decoration: none;
+        width: 150px;
+        margin: 0 50px 0 50px;
+      }
+      #logo img {
+        width: 150px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .contact,
+      .about-us,
+      .help {
+        width: 25%;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      .mainlink:hover {
+        text-decoration: none;
+      }
+      .copyright {
+        background-color: rgb(40, 40, 40);
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 15px 0 0 0;
+      }
+
+      .content-section {
+        width: 70%;
+        margin: 50px auto;
+        background-color: white;
+        padding: 20px;
+        border: 1px solid rgb(230, 230, 230);
+        border-radius: 10px;
+      }
+      .section-header {
+        text-align: center;
+        font-size: 50px;
+      }
+      .cart-header {
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      .cart-column {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        border-bottom: 1px solid black;
+        margin-right: 1.5em;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      .cart-row {
+        display: flex;
+      }
+
+      .cart-item {
+        width: 45%;
+      }
+
+      .cart-price {
+        width: 20%;
+        font-weight: bold;
+      }
+
+      .cart-quantity {
+        width: 35%;
+      }
+
+      .cart-item-title {
+        margin-left: 0.5em;
+        font-size: 18px;
+      }
+
+      .cart-item-image {
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .btn-danger {
+        color: white;
+        background-color: #eb5757;
+        border: none;
+        border-radius: 0.3em;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 18px;
+      }
+
+      .btn-danger:hover {
+        background-color: #cc4c4c;
+        cursor: pointer;
+      }
+
+      .cart-quantity-input {
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        margin-right: 25px;
+        width: 75px;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        opacity: 1;
+      }
+      .cart-row:last-child {
+        border-bottom: 1px solid black;
+      }
+
+      .cart-row:last-child .cart-column {
+        border: none;
+      }
+
+      .cart-total {
+        text-align: end;
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+
+      .cart-total-title {
+        font-weight: bold;
+        font-size: 22px;
+        color: black;
+        margin-right: 20px;
+      }
+
+      .cart-total-price {
+        font-size: 18px;
+      }
+
+      .btn-primary {
+        background-color: rgb(247, 185, 72);
+        border: none;
+        border-radius: 5px;
+        padding: 15px;
+        font-weight: bold;
+      }
+      .btn-primary:hover {
+        background-color: rgb(222, 164, 57);
+        cursor: pointer;
+      }
+      .btn-purchase {
+        display: block;
+        margin: 40px auto 80px auto;
+        font-size: 24px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Каталог Товаров</h1>
     <div class="main">
-        <div class="properties">
-            <span>Сортировать по:</span>
-            <select name="sort" id="sort-select">
-                <option value="0">По возрастанию цены</option>
-                <option value="0">По убыванию цены</option>
-                <option value="0">По возрастанию отзывов</option>
-                <option value="0">По убыванию отзывов</option>
-            </select>
-        </div> <br>
-        <div class="catalog">
-            <figure>
-                <div class="image">
-                    <a href="product.html"><img width="300px" src="images/apple.jpg" alt="apple"></a>
-                </div>
-                <figcaption>Органическое Яблоко</figcaption>
-                <figcaption id="price">100₸</figcaption>
-            </figure>
-            <figure>
-                <div class="image">
-                    <a href="product.html"><img width="300px" src="images/soap.jpg" alt="soap"></a>
-                </div>
-                <figcaption>Натуральное Мыло</figcaption>
-                <figcaption id="price">500₸</figcaption>
-            </figure>
-            <figure>
-                <div class="image">
-                    <a href="product.html"><img width="300px" src="images/lamp.jpg" alt="lamp"></a>
-                </div>
-                <figcaption>Энергоэффективная Лампа</figcaption>
-                <figcaption id="price">3000₸</figcaption>
-            </figure>
+      <div class="properties">
+        <span>Сортировать по:</span>
+        <select name="sort" id="sort-select">
+          <option value="0">По возрастанию цены</option>
+          <option value="0">По убыванию цены</option>
+          <option value="0">По возрастанию отзывов</option>
+          <option value="0">По убыванию отзывов</option>
+        </select>
+      </div>
+      <br />
+      <div class="catalog">
+        <div class="product-card">
+          <a href="product.html">
+            <img
+              class="product-image"
+              src="images/watermelon.jpg"
+              alt="Арбуз"
+            />
+            <p>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </p>
+            <p class="title">Натуральный арбуз</p>
+            <p class="price">180.00₸/кг</p>
+          </a>
+          <button class="add-to-cart">+ Добавить в Корзину</button>
         </div>
+        <div class="product-card">
+          <a href="product.html">
+            <img class="product-image" src="images/apple.jpg" alt="Яблоко" />
+            <p>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </p>
+            <p class="title">Органическое яблоко</p>
+            <p class="price">500.00₸/кг</p>
+          </a>
+          <button class="add-to-cart">+ Добавить в Корзину</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html">
+            <img class="product-image" src="images/soap.jpg" alt="Мыло" />
+            <p>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </p>
+            <p class="title">Органическое мыло</p>
+            <p class="price">500.00₸</p>
+          </a>
+          <button class="add-to-cart">+ Добавить в Корзину</button>
+        </div>
+        <div class="product-card">
+          <a href="product-banana.html">
+            <img class="product-image" src="images/bananas.jpg" alt="Бананы" />
+            <p>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </p>
+            <p class="title">Органические бананы</p>
+            <p class="price">1000.00₸/кг</p>
+          </a>
+          <button class="add-to-cart">+ Добавить в Корзину</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html">
+            <img
+              class="product-image"
+              src="images/broccoli.jpg"
+              alt="Брокколи"
+            />
+            <p>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </p>
+            <p class="title">Брокколи</p>
+            <p class="price">1500.00₸/кг</p>
+          </a>
+          <button class="add-to-cart">+ Добавить в Корзину</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html">
+            <img class="product-image" src="images/kiwi.jpg" alt="Киви" />
+            <p>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </p>
+            <p class="title">Органические киви</p>
+            <p class="price">700.00₸/кг</p>
+          </a>
+          <button class="add-to-cart">+ Добавить в Корзину</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html">
+            <img
+              class="product-image"
+              src="images/strawberry.jpg"
+              alt="Клубника"
+            />
+            <p>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-stroke"></i>
+            </p>
+            <p class="title">Органическая клубника</p>
+            <p class="price">2500.00₸/кг</p>
+          </a>
+          <button class="add-to-cart">+ Добавить в Корзину</button>
+        </div>
+      </div>
     </div>
+    <section class="container content-section">
+      <h2 class="section-header">Корзина</h2>
+      <div class="cart-row">
+        <span class="cart-item cart-header cart-column">Товар</span>
+        <span class="cart-price cart-header cart-column">Цена</span>
+        <span class="cart-quantity cart-header cart-column">Количество</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <strong class="cart-total-title">Итого</strong>
+        <span class="cart-total-price">₸0</span>
+      </div>
+      <button class="btn btn-primary btn-purchase" type="button">
+        <i class="fa fa-cart-shopping"></i> Приобрести
+      </button>
+    </section>
     <div class="footer">
-        <p>Присоединяйтесь к нашему сообществу и откройте для себя преимущества экологически чистых товаров с EcoShop!</p><br>
-        <a class="link" href="contact.html">Связаться с нами</a><br>
-        <a class="link" href="others/brochure.pdf" download>Скачать брошюру о EcoShop</a><br>
-        <a class="link" href="" onclick="mailTo('info@ecoshop.com')">Написать письмо в EcoShop</a>
+      <p>
+        Присоединяйтесь к нашему сообществу и откройте для себя преимущества
+        экологически чистых товаров с EcoShop!
+      </p>
+      <br />
+      <a id="logo" href="home.html">
+        <img src="images/logo.png" alt="logo" />
+        <p>EcoShop</p>
+        <p>EcoShop@gmail.com</p>
+      </a>
+      <div class="contact">
+        <a class="mainlink" href="contact.html"
+          ><strong>Связаться с нами</strong></a
+        ><br />
+        <a class="link" href="" onclick="mailTo('info@ecoshop.com')"
+          >Написать письмо в EcoShop</a
+        >
+      </div>
+      <div class="about-us">
+        <a class="mainlink" href="about.html"><strong>О сайте</strong></a
+        ><br />
+        <a class="link" href="others/brochure.pdf" download
+          >Скачать брошюру о EcoShop</a
+        >
+      </div>
+      <div class="help">
+        <a href="faq.html"><strong>Помощь</strong></a
+        ><br />
+        <a class="link" href="faq.html">Часто Задаваемые Вопросы</a>
+      </div>
+      <div class="copyright">
+        <p>©2024 EcoShop, все права защищены</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>

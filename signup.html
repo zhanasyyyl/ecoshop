@@ -1,0 +1,297 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/31e9720ace.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        font-family: "Nunito", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+      }
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0 0 150px;
+        align-items: center;
+      }
+      .login-card {
+        border: 1px solid rgb(200, 200, 200);
+        width: 40%;
+        border-radius: 5px;
+        justify-content: center;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 90vh;
+      }
+      .login-card h1 {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+      .divider {
+        width: 100%;
+        height: 2px;
+        background-color: rgb(52, 168, 83);
+        margin: 20px 0 20px 0;
+      }
+      form {
+        width: 100%;
+      }
+      form .inputs {
+        padding-bottom: 20px;
+      }
+      .password,
+      .name {
+        display: flex;
+        gap: 10px;
+      }
+      .password.inputs {
+        width: 45%;
+      }
+      .input {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 5px;
+      }
+      .icon {
+        position: absolute;
+        font-size: 18px;
+        float: right;
+        margin-right: 16px;
+        margin-top: -36px;
+        position: relative;
+        z-index: 2;
+        color: rgb(52, 168, 83);
+      }
+      form button,
+      .input,
+      label {
+        font-size: 18px;
+      }
+      #checkbox {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+      }
+      .span {
+        font-size: 18px;
+      }
+      #forgot-link {
+        text-align: right;
+        text-decoration: none;
+        color: rgb(52, 168, 83);
+        float: right;
+      }
+      form button {
+        background-color: rgb(52, 168, 83);
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        width: 100%;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      form button:hover {
+        cursor: pointer;
+        background-color: rgb(52, 150, 83);
+      }
+      .bottom {
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+      }
+      #have-account {
+        color: gray;
+      }
+      #illustration {
+        width: 60%;
+      }
+
+      .footer {
+        margin-top: 100px;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(52, 168, 83);
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .footer p {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      #logo {
+        text-align: center;
+        text-decoration: none;
+        width: 150px;
+        margin: 0 50px 0 50px;
+      }
+      #logo img {
+        width: 150px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .contact,
+      .about-us,
+      .help {
+        width: 25%;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      .mainlink:hover {
+        text-decoration: none;
+      }
+      .copyright {
+        background-color: rgb(40, 40, 40);
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 15px 0 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="login-card">
+        <form
+          action="https://formsubmit.co/2d82aca280933cfc81e129e7903e6096"
+          method="POST"
+        >
+          <h1>Создать аккаунт</h1>
+          <div class="divider"></div>
+          <div class="name">
+            <div class="inputs">
+              <label for="name">Имя*</label><br />
+              <input
+                class="input"
+                type="password"
+                name="Phone"
+                placeholder="Имя"
+              />
+              <span class="fa fa-user icon"></span>
+            </div>
+            <div class="inputs">
+              <label for="name">Фамилия*</label><br />
+              <input
+                class="input"
+                type="password"
+                name="Phone"
+                placeholder="Фамилия"
+              />
+              <span class="fa fa-user icon"></span>
+            </div>
+          </div>
+          <div class="inputs">
+            <label for="email">Электронная почта*</label><br />
+            <input class="input" type="text" name="Email" placeholder="Почта" />
+            <span class="fa fa-envelope icon"></span>
+          </div>
+          <div class="password">
+            <div class="inputs">
+              <label for="password">Пароль*</label><br />
+              <input
+                class="input"
+                type="password"
+                name="Phone"
+                placeholder="Пароль"
+              />
+              <span class="fa fa-lock icon"></span>
+            </div>
+            <div class="inputs">
+              <label for="password">Подтвердите Пароль*</label><br />
+              <input
+                class="input"
+                type="password"
+                name="Phone"
+                placeholder="Пароль"
+              />
+              <span class="fa fa-lock icon"></span>
+            </div>
+          </div>
+          <div class="Remember-me"></div>
+          <input type="checkbox" name="Remember Me" id="checkbox" />
+          <span class="span">Я принимаю условия пользования сайтом</span>
+          <button type="submit">Зарегистрироваться</button>
+          <div class="bottom">
+            <span id="have-account" class="span">Уже есть аккаунт? </span>
+            <a href="login.html">Войти</a>
+          </div>
+        </form>
+      </div>
+      <img id="illustration" src="images/login.png" alt="illustration" />
+    </div>
+    <div class="footer">
+      <p>
+        Присоединяйтесь к нашему сообществу и откройте для себя преимущества
+        экологически чистых товаров с EcoShop!
+      </p>
+      <br />
+      <a id="logo" href="home.html">
+        <img src="images/logo.png" alt="logo" />
+        <p>EcoShop@gmail.com</p>
+      </a>
+      <div class="contact">
+        <a class="mainlink" href="contact.html"
+          ><strong>Связаться с нами</strong></a
+        ><br />
+        <a class="link" href="" onclick="mailTo('info@ecoshop.com')"
+          >Написать письмо в EcoShop</a
+        >
+      </div>
+      <div class="about-us">
+        <a class="mainlink" href="about.html"><strong>О сайте</strong></a
+        ><br />
+        <a class="link" href="others/brochure.pdf" download
+          >Скачать брошюру о EcoShop</a
+        >
+      </div>
+      <div class="help">
+        <a href="faq.html"><strong>Помощь</strong></a
+        ><br />
+        <a class="link" href="faq.html">Часто Задаваемые Вопросы</a>
+      </div>
+      <div class="copyright">
+        <p>©2024 EcoShop, все права защищены</p>
+      </div>
+    </div>
+  </body>
+</html>

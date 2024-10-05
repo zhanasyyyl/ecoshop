@@ -1,25 +1,66 @@
 <!-- Это код для файла home.html, который содержит основное содержимое главной страницы сайта -->
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <!-- Подключаем файл с скриптами JavaScript -->
-  <script src="script.js"></script>
-</head>
-<body>
-  <div class="content">
-    <div class="paragraphs">
-      <h1>Добро пожаловать<br>на EcoShop!</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://kit.fontawesome.com/31e9720ace.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Подключаем файл с скриптами JavaScript -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="hero-section">
+      <h1 id="welcome-title">Добро пожаловать на</h1>
+      <h1 id="ecoshop-title">EcoShop!</h1>
       <!-- Используем тег p для вставки абзацев с текстом -->
-      <p>Это онлайн-платформа, которая соединяет продавцов и покупателей экологически чистых товаров, таких как органическая еда, биоразлагаемая упаковка и т.д.</p>
-      <p>EcoShop предлагает вам широкий выбор товаров от проверенных и сертифицированных продавцов, а также предоставляет информацию о происхождении, составе и воздействии на окружающую среду каждого товара, чтобы вы могли принимать осознанные решения.</p>
-      <p>EcoShop также создает сообщество единомышленников, которые делятся своим опытом, отзывами и советами по использованию экологически чистых товаров, а также участвуют в акциях, конкурсах и благотворительных кампаниях, которые проводит сайт.</p>
+      <p>
+        Это онлайн-платформа, которая соединяет продавцов и покупателей
+        экологически чистых товаров, таких как органическая еда, биоразлагаемая
+        упаковка и т.д.
+      </p>
+      <a href="catalog.html"
+        ><button id="get-started">Каталог товаров</button></a
+      >
+      <a href="login.html"
+        ><button id="login">
+          Войти <i class="fa fa-arrow-right-to-bracket"></i></button
+      ></a>
     </div>
-      <!-- Используем тег table для создания таблицы с примерами товаров -->
+
+    <div class="what-we-do">
+      <h1>Что предлагает EcoShop?</h1>
+      <div class="column">
+        <img src="images/wide-selection.jpg" alt="icon" />
+        <h3>Широкий выбор товаров</h3>
+        <p>
+          EcoShop предлагает вам широкий выбор товаров от проверенных и
+          сертифицированных продавцов, а также предоставляет информацию о
+          происхождении, составе и воздействии на окружающую среду каждого
+          товара, чтобы вы могли принимать осознанные решения.
+        </p>
+      </div>
+      <div class="column">
+        <img src="images/community.jpg" alt="icon" />
+        <h3>Сообщество единомышленников</h3>
+        <p>
+          EcoShop также создает сообщество единомышленников, которые делятся
+          своим опытом, отзывами и советами по использованию экологически чистых
+          товаров, а также участвуют в акциях, конкурсах и благотворительных
+          кампаниях, которые проводит сайт.
+        </p>
+      </div>
+    </div>
+    <h1 id="examples-h1">Примеры товаров</h1>
+    <!-- Используем тег table для создания таблицы с примерами товаров -->
     <table>
       <!-- Используем тег tr для создания строки таблицы -->
       <tr>
@@ -33,58 +74,123 @@
         <!-- Используем тег td для создания обычной ячейки таблицы -->
         <td>
           <!-- Используем тег img для вставки изображения товара, которое находится в файле apple.jpg -->
-          <img src="images/apple.jpg" alt="Яблоко">
+          <a href="product.html"
+            ><img class="image" src="images/apple.jpg" alt="Яблоко"
+          /></a>
         </td>
-        <td id="price">100 тенге</td>
-        <td>Органическое яблоко, выращенное без химических удобрений и пестицидов</td>
+        <td id="price">500 тенге</td>
+        <td>
+          Органическое яблоко, выращенное без химических удобрений и пестицидов
+        </td>
       </tr>
       <!-- Используем тег tr для создания строки таблицы -->
       <tr>
         <!-- Используем тег td для создания обычной ячейки таблицы -->
         <td>
           <!-- Используем тег img для вставки изображения товара, которое находится в файле soap.jpg -->
-          <img src="images/soap.jpg" alt="Мыло">
+          <a href="product.html"
+            ><img class="image" src="images/soap.jpg" alt="Мыло"
+          /></a>
         </td>
         <td id="price">500 тенге</td>
-        <td>Натуральное мыло, сделанное из растительных масел и эфирных масел, без парабенов и сульфатов</td>
+        <td>
+          Натуральное мыло, сделанное из растительных масел и эфирных масел, без
+          парабенов и сульфатов
+        </td>
       </tr>
       <!-- Используем тег tr для создания строки таблицы -->
       <tr>
         <!-- Используем тег td для создания обычной ячейки таблицы -->
         <td>
           <!-- Используем тег img для вставки изображения товара, которое находится в файле lamp.jpg -->
-          <img src="images/lamp.jpg" alt="Лампа">
+          <a href="product.html"
+            ><img class="image" src="images/lamp.jpg" alt="Лампа"
+          /></a>
         </td>
         <td id="price">3000 тенге</td>
-        <td>Энергоэффективная лампа, которая потребляет меньше электричества и излучает мягкий свет</td>
+        <td>
+          Энергоэффективная лампа, которая потребляет меньше электричества и
+          излучает мягкий свет
+        </td>
       </tr>
-    </table> <br>
-    <!-- Используем тег audio для вставки аудиофайла с музыкой, который находится в файле music.mp3 -->
-    <audio controls>
-      <source src="others/music.mp3" type="audio/mpeg">
-      Ваш браузер не поддерживает аудио элемент.
-    </audio>
-    <!-- Используем тег video для вставки видеофайла с роликом, который находится в файле video.mp4 -->
-    <video controls>
-      <source src="others/video.mp4" type="video/mp4">
-      Ваш браузер не поддерживает видео элемент.
-    </video> <br>
-    <!-- Используем тег figure для создания блока с рисунком и подписью -->
-    <figure>
-      <!-- Используем тег img для вставки рисунка, который находится в файле drawing.png -->
-      <img src="images/drawing.png" alt="Рисунок">
-      <!-- Используем тег figcaption для вставки подписи к рисунку -->
-      <figcaption>Это рисунок, который я нарисовал для вас</figcaption>
-    </figure> <br>
-    <!-- Используем тег marquee для создания бегущей строки с текстом -->
-    <marquee>Спасибо, что выбрали EcoShop!</marquee><br>
-    <!-- Используем тег a для создания гиперссылок на разные ресурсы -->
-  </div>
-  <div class="footer">
-    <p>Присоединяйтесь к нашему сообществу и откройте для себя преимущества экологически чистых товаров с EcoShop!</p><br>
-    <a class="link" href="contact.html">Связаться с нами</a><br>
-    <a class="link" href="others/brochure.pdf" download>Скачать брошюру о EcoShop</a><br>
-    <a class="link" href="" onclick="mailTo('info@ecoshop.com')">Написать письмо в EcoShop</a>
-  </div>
-</body>
+    </table>
+    <div class="media-section">
+      <div class="media">
+        <!-- Используем тег video для вставки видеофайла с роликом, который находится в файле video.mp4 -->
+        <video controls>
+          <source src="others/video.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает видео элемент.
+        </video>
+        <!-- Используем тег audio для вставки аудиофайла с музыкой, который находится в файле music.mp3 -->
+        <audio controls>
+          <source src="others/music.mp3" type="audio/mpeg" />
+          Ваш браузер не поддерживает аудио элемент.
+        </audio>
+      </div>
+      <div class="video-desc">
+        <h1>Удобство для покупателей</h1>
+        <p>
+          EcoShop - это не просто магазин, а целая экосистема, где каждый может
+          найти то, что нужно для здорового и этичного образа жизни. На нашей
+          платформе ты можешь выбирать из тысячи товаров, которые прошли строгий
+          отбор по критериям экологичности, безопасности и качества. Мы работаем
+          только с проверенными поставщиками, которые делят наши ценности и
+          заботятся о сохранении природы.
+        </p>
+        <div class="services">
+          <div class="col">
+            <i class="fa fa-truck-fast"></i>
+            <p>Бесплатная доставка</p>
+          </div>
+          <div class="col">
+            <i class="fa fa-circle-arrow-left"></i>
+            <p>Условия возврата</p>
+          </div>
+          <div class="col">
+            <i class="fa-brands fa-cc-amazon-pay"></i>
+            <p>Безопасная оплата</p>
+          </div>
+          <div class="col">
+            <i class="fa fa-circle-check"></i>
+            <p>Лучшее качество</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <marquee>Спасибо, что выбрали EcoShop!</marquee><br />
+      <p>
+        Присоединяйтесь к нашему сообществу и откройте для себя преимущества
+        экологически чистых товаров с EcoShop!
+      </p>
+      <br />
+      <a id="logo" href="home.html">
+        <img src="images/logo.png" alt="logo" />
+        <p>EcoShop@gmail.com</p>
+      </a>
+      <div class="contact">
+        <a class="mainlink" href="contact.html"
+          ><strong>Связаться с нами</strong></a
+        ><br />
+        <a class="link" href="" onclick="mailTo('info@ecoshop.com')"
+          >Написать письмо в EcoShop</a
+        >
+      </div>
+      <div class="about-us">
+        <a class="mainlink" href="about.html"><strong>О сайте</strong></a
+        ><br />
+        <a class="link" href="others/brochure.pdf" download
+          >Скачать брошюру о EcoShop</a
+        >
+      </div>
+      <div class="help">
+        <a href="faq.html"><strong>Помощь</strong></a
+        ><br />
+        <a class="link" href="faq.html">Часто Задаваемые Вопросы</a>
+      </div>
+      <div class="copyright">
+        <p>©2024 EcoShop, все права защищены</p>
+      </div>
+    </div>
+  </body>
 </html>

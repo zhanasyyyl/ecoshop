@@ -1,90 +1,204 @@
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <style>
-*{
-    font-family: "Nunito", sans-serif;
-    box-sizing: border-box;
-}
-body{
-    min-height: 100vh;
-    margin: 0;
-    background-image: url(images/about.jpg);
-    background-repeat: no-repeat;
-    background-size: 60%;
-    background-position: 40vw 20vh;
-}
-h1{
-    font-size: 50px;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    background-color: rgb(0,165,0);
-}
-.about{
-    margin: 20px 70px 0 70px;
-}
-p,ul{
-    font-size: 18px;
-    width: 38vw;
-}
-ul{
-    padding-left: 0;
-    margin-left: 0;
-}
-.text-box h2{
-    font-size: 42px;
-}
-.footer{
-    margin-top: 50px;
-    padding: 20px 0 20px 0;
-    width: 100%;
-    align-items: center;
-    background-color: rgb(0,165,0);
-    text-align: center;
-}
-.footer p{
-    margin: 0;
-    padding: 0;
-    width: auto;
-    color: white
-}
-.link{
-    color: rgb(250, 250, 250);
-    text-decoration: none;
-}
-.link:hover{
-    text-decoration: underline;
-}
+      * {
+        font-family: "Nunito", sans-serif;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(images/about.jpg);
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: 40vw 250px;
+      }
+      .header {
+        background-color: rgb(52, 168, 83);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        background-color: rgb(52, 168, 83);
+      }
+      .header::before {
+        content: "";
+        background-image: url(images/background.jpg);
+        background-size: contain;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.09;
+      }
+      h1 {
+        font-size: 64px;
+        text-align: center;
+        color: white;
+        margin: 0;
+      }
+      #header-paragraph {
+        color: white;
+        text-align: center;
+      }
+      .about {
+        margin: 20px 70px 0 70px;
+      }
+      .text,
+      ul {
+        width: 35vw;
+        margin-left: 30px;
+      }
+      ul {
+        margin-left: 10px;
+      }
+      h2 {
+        font-size: 30px;
+        margin: 0;
+        margin-left: 30px;
+      }
+      .footer {
+        margin-top: 100px;
+        padding: 20px 0 0 0;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(52, 168, 83);
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .footer p {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      #logo {
+        text-align: center;
+        text-decoration: none;
+        width: 150px;
+        margin: 0 50px 0 50px;
+      }
+      #logo img {
+        width: 150px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .contact,
+      .about-us,
+      .help {
+        width: 25%;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      .mainlink:hover {
+        text-decoration: none;
+      }
+      .copyright {
+        background-color: rgb(40, 40, 40);
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 15px 0 0 0;
+      }
     </style>
-</head>
-<body>
-    <h1>О Сайте</h1>
+  </head>
+  <body>
+    <div class="header">
+      <h1>О Сайте</h1>
+      <p id="header-paragraph">
+        EcoShop - это онлайн-платформа, которая соединяет продавцов и
+        покупателей экологически чистых товаров, таких как органическая еда,
+        натуральная косметика, биоразлагаемая упаковка, энергоэффективные
+        устройства и т.д.
+      </p>
+    </div>
     <div class="about">
-        <p id="text">Добро пожаловать на EcoShop - ваш источник экологически чистых товаров для здорового и счастливого образа жизни!<br>
-            EcoShop - это онлайн-платформа, которая соединяет продавцов и покупателей экологически чистых товаров, таких как органическая еда, натуральная косметика, биоразлагаемая упаковка, энергоэффективные устройства и т.д.</p>
-        <h2>Наша миссия</h2>
-        <p>Наша миссия - сделать мир лучше, поддерживая устойчивое потребление и производство. Мы верим, что каждый может внести свой вклад в защиту окружающей среды и улучшение качества жизни, выбирая экологически чистые товары.
-        </p>
-        <h2>На нашем сайте вы можете:</h2>
-        <ul>
-            <li>Найти широкий ассортимент экологически чистых товаров от проверенных продавцов по доступным ценам</li>
-            <li>Продать свои экологически чистые товары, используя удобную и безопасную систему оплаты и доставки</li>
-            <li>Получать информацию и советы о том, как жить экологично и экономично</li>
-            <li>Общаться с другими пользователями, делясь своим опытом и отзывами о товарах</li>
-            <li>Участвовать в акциях и розыгрышах, получая скидки и подарки</li>
-        </ul>
+      <h2>Наша миссия</h2>
+      <p class="text">
+        Наша миссия - сделать мир лучше, поддерживая устойчивое потребление и
+        производство. Мы верим, что каждый может внести свой вклад в защиту
+        окружающей среды и улучшение качества жизни, выбирая экологически чистые
+        товары.
+      </p>
+      <br /><br />
+      <h2>На нашем сайте вы можете:</h2>
+      <ul>
+        <li>
+          Найти широкий ассортимент экологически чистых товаров от проверенных
+          продавцов по доступным ценам
+        </li>
+        <li>
+          Продать свои экологически чистые товары, используя удобную и
+          безопасную систему оплаты и доставки
+        </li>
+        <li>
+          Получать информацию и советы о том, как жить экологично и экономично
+        </li>
+        <li>
+          Общаться с другими пользователями, делясь своим опытом и отзывами о
+          товарах
+        </li>
+        <li>Участвовать в акциях и розыгрышах, получая скидки и подарки</li>
+      </ul>
     </div>
     <div class="footer">
-        <p>Присоединяйтесь к нашему сообществу и откройте для себя преимущества экологически чистых товаров с EcoShop!</p><br>
-        <a class="link" href="contact.html">Связаться с нами</a><br>
-        <a class="link" href="brochure.pdf" download>Скачать брошюру о EcoShop</a><br>
-        <a class="link" href="" onclick="mailTo('info@ecoshop.com')">Написать письмо в EcoShop</a>
+      <p>
+        Присоединяйтесь к нашему сообществу и откройте для себя преимущества
+        экологически чистых товаров с EcoShop!
+      </p>
+      <br />
+      <a id="logo" href="home.html">
+        <img src="images/logo.png" alt="logo" />
+        <p>EcoShop</p>
+        <p>EcoShop@gmail.com</p>
+      </a>
+      <div class="contact">
+        <a class="mainlink" href="contact.html"
+          ><strong>Связаться с нами</strong></a
+        ><br />
+        <a class="link" href="" onclick="mailTo('info@ecoshop.com')"
+          >Написать письмо в EcoShop</a
+        >
+      </div>
+      <div class="about-us">
+        <a class="mainlink" href="about.html"><strong>О сайте</strong></a
+        ><br />
+        <a class="link" href="others/brochure.pdf" download
+          >Скачать брошюру о EcoShop</a
+        >
+      </div>
+      <div class="help">
+        <a href="faq.html"><strong>Помощь</strong></a
+        ><br />
+        <a class="link" href="faq.html">Часто Задаваемые Вопросы</a>
+      </div>
+      <div class="copyright">
+        <p>©2024 EcoShop, все права защищены</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
